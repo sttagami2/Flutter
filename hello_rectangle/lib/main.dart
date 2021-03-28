@@ -6,7 +6,6 @@ void main() {
   ));
 }
 
-
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,25 +15,35 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Center(
-        child: IconButton(
-          onPressed: () {
-            print('you clicked me');
-          },
-          icon: Icon(Icons.alternate_email),
-          color: Colors.amber,
-        ),
-        // child: RaisedButton.icon(
-        //   onPressed: () {},
-        //   icon: Icon(
-        //     Icons.mail
-        //   ),
-        //   label: Text('maill me'),
-        //   color: Colors.amber,
-        // ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              Text('helllo,'),
+              Text(' world'),
+            ],
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            color: Colors.cyan,
+            child: Text('one'),
+          ),
+          Container(
+            padding: EdgeInsets.all(30.0),
+            color: Colors.pinkAccent,
+            child: Text('two'),
+          ),
+          Container(
+            padding: EdgeInsets.all(40.0),
+            color: Colors.amber,
+            child: Text('three'),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => {},
+        onPressed: () {},
         child: Text('click'),
         backgroundColor: Colors.red[600],
       ),
